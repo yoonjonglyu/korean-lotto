@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+// 웹팩 관련 모듈 불러오기
 const port = process.env.PORT || 38888;
 
 module.exports = {
@@ -10,12 +10,12 @@ module.exports = {
       filename : 'bundle.[hash].js' // 해시
   },
   devtool : 'inline-source-map', // 소스맵으로 디버깅 도움
-  module : {
-      rules : [
+  module : { // 모듈정의
+      rules : [ // 처리 방법
           {
               test : /\.(js)$/,
               exclude : /node_modules/,
-              use : ['babel-loader']
+              use : ['babel-loader'] // 바벨룰
           },
           {
               test : /\.css%/,
@@ -24,7 +24,7 @@ module.exports = {
                       loader : 'style-loader'
                   },
                   {
-                      loader : 'css-loader',
+                      loader : 'css-loader', // css 룰
                       options : {
                           modules : true,
                           camelCase : true,
@@ -35,13 +35,13 @@ module.exports = {
           }
       ]
   },
-  plugins : [
+  plugins : [ // 플러그인
       new HtmlWebpackPlugin({
           template : 'public/index.html',
           favicon : 'public/favicon.ico'
       })
   ],
-  devServer: {
+  devServer: { // 웹팩서버
     host: 'localhost',
     port: port,
     historyApiFallback: true,
