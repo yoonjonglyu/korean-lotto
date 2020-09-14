@@ -1,0 +1,36 @@
+{
+  "name": "korean-lotto",
+  "version": "1.0.0",
+  "description": "기획 세세하게 안하고 간단히 만들어 볼만한게 뭔가 생각해보니 예전에 한번 만들어 보자 했던 로또 번호 추천 해주는 프로그램을 만들어 보기로 결정했다. 사실 이것도간단한 수준에서 벗어나면복잡해질건 많지만...간단한 수준에서 만들어보자.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoonjonglyu/korean-lotto.git"
+  },
+  "author": "ISA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yoonjonglyu/korean-lotto/issues"
+  },
+  "homepage": "https://github.com/yoonjonglyu/korean-lotto#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "css-loader": "^4.3.0",
+    "html-webpack-plugin": "^4.4.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-prop-types": "^0.4.0",
+    "react-router-dom": "^5.2.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
