@@ -4,7 +4,7 @@
   "description": "기획 세세하게 안하고 간단히 만들어 볼만한게 뭔가 생각해보니 예전에 한번 만들어 보자 했던 로또 번호 추천 해주는 프로그램을 만들어 보기로 결정했다. 사실 이것도간단한 수준에서 벗어나면복잡해질건 많지만...간단한 수준에서 만들어보자.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   "homepage": "https://github.com/yoonjonglyu/korean-lotto#readme",
   "dependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^8.1.0",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",

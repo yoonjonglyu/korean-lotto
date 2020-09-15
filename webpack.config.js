@@ -38,7 +38,7 @@ module.exports = {
   plugins : [ // 플러그인
       new HtmlWebpackPlugin({
           template : 'public/index.html',
-          favicon : 'public/favicon.ico'
+          //favicon : 'public/favicon.ico'
       })
   ],
   devServer: { // 웹팩서버
