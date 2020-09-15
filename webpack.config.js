@@ -32,19 +32,21 @@ module.exports = {
                       }
                   }
               ]
-          }
+          },
       ]
   },
   plugins : [ // 플러그인
       new HtmlWebpackPlugin({
           template : 'public/index.html',
           //favicon : 'public/favicon.ico'
-      })
+      }),
+      new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: { // 웹팩서버
     host: 'localhost',
     port: port,
     historyApiFallback: true,
-    open: true
+    open: true,
+    hot: true
   }
 };

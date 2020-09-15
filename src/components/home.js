@@ -6,7 +6,7 @@ import Layout from './Layout';
 const Home = () => {
   return (
     <Layout>
-      <p>홈</p>
+      <p>홈입니다.</p>
       <p>
         <Link to="/lotto">로또</Link>
       </p>

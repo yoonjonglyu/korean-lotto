@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
           {children}
       </main>
       <footer>
-          <copyright>ISA all right reserved.</copyright>
+          <p>ISA all right reserved.</p>
       </footer>
     </div>
   );

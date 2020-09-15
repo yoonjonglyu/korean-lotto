@@ -1,3 +1,4 @@
 {
-    "presets": ["env", "react", "stage-1"] // 해당 설정셋을 이용한다는 뜻.
+    "presets": ["env", "react", "stage-1"], // 해당 설정셋을 이용한다는 뜻.
+    "plugins": ["react-hot-loader/babel"]
 }
