@@ -1,10 +1,15 @@
 import React from 'react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import importedComponent from 'react-imported-component';
 
 import Home from './Home';
-import lotto from './lotto';
-import NotFound from './notfound';
-
+import loading from './loading';
+const lotto = importedComponent(
+  () => import('./lotto'), {loadingComponent : loading}
+);
+const NotFound = importedComponent(
+  () => import('./notfound'), {loadingComponent : loading}
+);
 const App = () => {
   return (
     <Router>

@@ -7,7 +7,7 @@ module.exports = {
   mode : 'development', // 개발 모드 와 프로덕트 모드 production 속도 <=> 배포
   entry : './src/index.js', // 진입점 디폴트 src
   output : { // 컴파일 결과물
-      filename : 'bundle.[hash].js' // 해시
+      filename : '[name].[hash].js', // 해시
   },
   devtool : 'inline-source-map', // 소스맵으로 디버깅 도움
   module : { // 모듈정의
