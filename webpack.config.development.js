@@ -9,7 +9,7 @@ module.exports = {
       app: './src/index.js', // 진입점 디폴트 src
   },
   output : { // 컴파일 결과물
-      filename : '[name].[chunkhash].js', // 해시
+      filename : '[name].[hash].js', // 해시
   },
   devtool : 'inline-source-map', // 소스맵으로 디버깅 도움
   module : { // 모듈정의
