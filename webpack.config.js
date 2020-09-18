@@ -5,9 +5,11 @@ const port = process.env.PORT || 38888;
 
 module.exports = {
   mode : 'development', // 개발 모드 와 프로덕트 모드 production 속도 <=> 배포
-  entry : './src/index.js', // 진입점 디폴트 src
+  entry : {
+      app: './src/index.js', // 진입점 디폴트 src
+  },
   output : { // 컴파일 결과물
-      filename : '[name].[hash].js', // 해시
+      filename : '[name].[chunkhash].js', // 해시
   },
   devtool : 'inline-source-map', // 소스맵으로 디버깅 도움
   module : { // 모듈정의
@@ -34,6 +36,18 @@ module.exports = {
               ]
           },
       ]
+  },
+  optimization : {
+    splitChunks: {
+        cacheGroups : {
+            vendor : {
+                chunks : 'initial',
+                test : 'vendor',
+                name : 'vendor',
+                enforce : true
+            }
+        }
+    }
   },
   plugins : [ // 플러그인
       new HtmlWebpackPlugin({
