@@ -4,9 +4,9 @@
   "description": "기획 세세하게 안하고 간단히 만들어 볼만한게 뭔가 생각해보니 예전에 한번 만들어 보자 했던 로또 번호 추천 해주는 프로그램을 만들어 보기로 결정했다. 사실 이것도간단한 수준에서 벗어나면복잡해질건 많지만...간단한 수준에서 만들어보자.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.config.development.js",
+    "dev": "webpack-dev-server --env.env=dev",
     "prebuild": "rimraf dist",
-    "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.production.js"
+    "build": "cross-env NODE_ENV=production webpack -p --env.env=prod"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "chalk": "^4.1.0",
     "cross-env": "^7.0.2",
     "css-loader": "^4.3.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
@@ -41,6 +42,7 @@
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.4"
   }
 }
