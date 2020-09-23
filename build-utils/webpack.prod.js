@@ -1,6 +1,6 @@
 const commonPaths = require('./common-paths');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
     mode : 'production',
@@ -17,32 +17,18 @@ const config = {
         rules : [
             {
                 test : /\.css*/,
-                use : ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use : [
-                        {
-                            loader : 'css-loader',
-                            options : {
-                                modules : true,
-                                importLoaders: 1,
-                                camelCase : true,
-                                sourceMap : true
-                            }
-                        },
-                        {
-                            loader : 'postcss-loader',
-                            options : {
-                                config : {
-                                    ctx : {
-                                        autoprefixer : {
-                                            browsers : 'last 2 versions'
-                                        }
-                                    }
-                                }
+                use : [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    {
+                        loader : 'postcss-loader',
+                        options : {
+                            postcssOptions : {
+                                config : './postcss.config.js'
                             }
                         }
-                    ]
-                })
+                    }
+                ]
             }
         ]
     },
@@ -59,9 +45,9 @@ const config = {
         }
       },
     plugins : [
-        new ExtractTextPlugin({
-            filename : 'css/styles.[hash].css',
-            allChunks : true
+        new MiniCssExtractPlugin({
+            filename : 'css/[name].[hash].css',
+            chunkFilename : 'css/[id].[hash].css'
         })
     ]
 };
