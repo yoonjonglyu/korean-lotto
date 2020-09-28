@@ -6,9 +6,31 @@
 
 /** custom **/
 
-.hash-tag {
-    @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2;
+/** wrap **/
+.wrap {
+    @apply flex flex-col min-h-screen;
 }
-.red-tag {
-    @apply inline-block bg-red-900 text-red-800;
+
+/** header **/
+
+.header {
+    @apply flex items-center justify-between h-16 flex-grow-0;
+}
+.header-nav {
+    @apply flex list-none; 
+}
+.header-nav li {
+    @apply p-5;
+}
+
+/** main **/
+
+.main {
+    @apply flex flex-grow;
+}
+
+/** footer **/
+
+.footer {
+    @apply h-8 flex-grow-0 bg-gray-500 text-center;
 }

@@ -5,7 +5,7 @@ import Layout from './Layout';
 const lotto = () => {
   return (
     <Layout>
-      <strong>로또번호추첨</strong>
+      <strong>로또번호통계</strong>
     </Layout>
   );
 };

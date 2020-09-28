@@ -21236,32 +21236,49 @@ video {
 
 /** custom **/
 
-.hash-tag {
-  display: inline-block;
-  --bg-opacity: 1;
-  background-color: #edf2f7;
-  background-color: rgba(237, 242, 247, var(--bg-opacity));
-  border-radius: 9999px;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  --text-opacity: 1;
-  color: #4a5568;
-  color: rgba(74, 85, 104, var(--text-opacity));
-  margin-right: 0.5rem;
+/** wrap **/
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.red-tag {
-  display: inline-block;
+/** header **/
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  flex-grow: 0;
+}
+
+.header-nav {
+  display: flex;
+  list-style-type: none;
+}
+
+.header-nav li {
+  padding: 1.25rem;
+}
+
+/** main **/
+
+.main {
+  display: flex;
+  flex-grow: 1;
+}
+
+/** footer **/
+
+.footer {
+  height: 2rem;
+  flex-grow: 0;
   --bg-opacity: 1;
-  background-color: #742a2a;
-  background-color: rgba(116, 42, 42, var(--bg-opacity));
-  --text-opacity: 1;
-  color: #9b2c2c;
-  color: rgba(155, 44, 44, var(--text-opacity));
+  background-color: #a0aec0;
+  background-color: rgba(160, 174, 192, var(--bg-opacity));
+  text-align: center;
 }
 
 @media (min-width: 640px) {

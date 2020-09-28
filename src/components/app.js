@@ -7,19 +7,22 @@ import loading from './loading';
 const lotto = importedComponent(
   () => import('./lotto'), {loadingComponent : loading}
 );
+const randomNumber = importedComponent(
+  () => import('./number'), {loadingComponent : loading}
+);
 const NotFound = importedComponent(
   () => import('./notfound'), {loadingComponent : loading}
 );
+
 const App = () => {
   return (
     <Router>
-      <div>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/lotto" component={lotto} />
+          <Route exact path="/number" component={randomNumber} />
           <Route component={NotFound} />
         </Switch>
-      </div>
     </Router>
   );
 };
