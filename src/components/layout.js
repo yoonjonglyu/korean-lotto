@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import tailwind from '../css/main.css';
+import logo from '../images/Dhlottery_BI_JPG/로또645.jpg';
 
 const Layout = ({ children }) => {
   return (
@@ -9,7 +10,7 @@ const Layout = ({ children }) => {
         <ul className={tailwind['header-nav']}>
           <li>
             <Link to="/">
-              <h1>lotto main</h1>
+              <h1><img src={logo} /></h1>
             </Link>
           </li>
           <li>
