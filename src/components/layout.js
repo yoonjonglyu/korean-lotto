@@ -10,17 +10,17 @@ const Layout = ({ children }) => {
         <ul className={tailwind['header-nav']}>
           <li>
             <Link to="/">
-              <h1><img src={logo} /></h1>
+              <h1><img src={logo} width="100px"/></h1>
             </Link>
           </li>
           <li>
             <Link to="/lotto">
-              <span>지난 당첨번호 보기</span>
+              <span>지난 당첨번호</span>
             </Link>
           </li>
           <li>
             <Link to="/number">
-              <span>로또 번호 추첨</span>
+              <span>번호 추첨</span>
             </Link>
           </li>
         </ul>
