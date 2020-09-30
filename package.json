@@ -1,5 +1,6 @@
 {
   "name": "korean-lotto",
+  "homepage" : "https://yoonjonglyu.github.io/korean-lotto/",
   "version": "1.0.0",
   "description": "기획 세세하게 안하고 간단히 만들어 볼만한게 뭔가 생각해보니 예전에 한번 만들어 보자 했던 로또 번호 추천 해주는 프로그램을 만들어 보기로 결정했다. 사실 이것도간단한 수준에서 벗어나면복잡해질건 많지만...간단한 수준에서 만들어보자.",
   "main": "index.js",
@@ -10,7 +11,8 @@
     "build": "cross-env NODE_ENV=production webpack -p --env.env=prod",
     "build:bundleanalyzer": "npm run build -- --env.addons=bundleanalyzer",
     "build:css": "postcss src/css/tailwind.css -o src/css/main.css",
-    "watch:css": "postcss src/css/tailwind.css -o src/css/main.css"
+    "watch:css": "postcss src/css/tailwind.css -o src/css/main.css",
+    "deploy": "gh-pages -d docs" 
   },
   "repository": {
     "type": "git",
@@ -44,6 +46,7 @@
     "cross-env": "^7.0.2",
     "css-loader": "^4.3.0",
     "file-loader": "^6.1.0",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.4.1",
     "mini-css-extract-plugin": "^0.11.2",
     "postcss-cli": "^8.0.0",
