@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{41:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var u=a(n(0)),l=a(n(16));function a(e){return e&&e.__esModule?e:{default:e}}t.default=function(){return u.default.createElement(l.default,null,u.default.createElement("p",null,"로또 번호 추첨입니다."))}}}]);
-//# sourceMappingURL=3.819955a029e9be08cbdb.js.map
