@@ -3,7 +3,7 @@
 벗어나면복잡해질건 많지만...간단한 수준에서 만들어보자.
 
 ## page
-- [로또추첨](https://yoonjonglyu.github.io/korean-lotto/, "korea-lotto link")
+- [로또추첨](https://yoonjonglyu.github.io/korean-lotto/ "korea-lotto link")
 
 ## 목적
 > - 리액트 es6 개발 환경 셋팅 cra 사용 안하고 셋팅하면서 세밀한 부분 체크 cra 사용하면 기본적인거 다 잡아줘서 편하긴한데 내부 구조에 대해서 파악해놓은게 미흡하다는 생각이 들었음.
