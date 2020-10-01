@@ -17,7 +17,7 @@ const NotFound = imported(
 
 const App = () => {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename="/korean-lotto">
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/lotto" component={lotto} />
