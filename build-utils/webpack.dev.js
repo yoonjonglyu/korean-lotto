@@ -18,13 +18,7 @@ const config = {
                 test : /\.css$/,
                 use : [
                     MiniCssExtractPlugin.loader,
-                    {
-                        loader : 'css-loader',
-                        options : {
-                            modules : true,
-                            sourceMap : true
-                        }
-                    },
+                    'css-loader',
                     {
                         loader : 'postcss-loader',
                         options : {

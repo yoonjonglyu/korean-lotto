@@ -1,18 +1,19 @@
 {
   "name": "korean-lotto",
-  "homepage" : "https://yoonjonglyu.github.io/korean-lotto/",
   "version": "1.0.0",
   "description": "기획 세세하게 안하고 간단히 만들어 볼만한게 뭔가 생각해보니 예전에 한번 만들어 보자 했던 로또 번호 추천 해주는 프로그램을 만들어 보기로 결정했다. 사실 이것도간단한 수준에서 벗어나면복잡해질건 많지만...간단한 수준에서 만들어보자.",
   "main": "index.js",
+  "homepage": "https://yoonjonglyu.github.io/korean-lotto",
   "scripts": {
     "dev": "webpack-dev-server --env.env=dev",
     "dev:bundleanalyzer": "npm run dev -- --env.addons=bundleanalyzer",
-    "prebuild": "rimraf docs",
+    "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack -p --env.env=prod",
     "build:bundleanalyzer": "npm run build -- --env.addons=bundleanalyzer",
     "build:css": "postcss src/css/tailwind.css -o src/css/main.css",
     "watch:css": "postcss src/css/tailwind.css -o src/css/main.css",
-    "deploy": "gh-pages -d docs" 
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,6 @@
   "bugs": {
     "url": "https://github.com/yoonjonglyu/korean-lotto/issues"
   },
-  "homepage": "https://github.com/yoonjonglyu/korean-lotto#readme",
   "dependencies": {
     "react": "^16.13.1",
     "react-delay-render": "^0.1.2",

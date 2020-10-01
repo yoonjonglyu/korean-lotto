@@ -1,22 +1,23 @@
 import React from 'react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
-import importedComponent from 'react-imported-component';
+import { imported, lazy, useImported } from 'react-imported-component/macro';
+import '../css/main.css';
 
 import Home from './Home';
 import loading from './loading';
-const lotto = importedComponent(
+const lotto = imported(
   () => import('./lotto'), {loadingComponent : loading}
 );
-const randomNumber = importedComponent(
+const randomNumber = imported(
   () => import('./number'), {loadingComponent : loading}
 );
-const NotFound = importedComponent(
+const NotFound = imported(
   () => import('./notfound'), {loadingComponent : loading}
 );
 
 const App = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/lotto" component={lotto} />
