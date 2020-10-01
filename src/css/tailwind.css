@@ -14,7 +14,7 @@
 /** header **/
 
 .header {
-    @apply flex items-center justify-between h-16 flex-grow-0;
+    @apply flex items-center justify-between h-16 flex-grow-0 border border-t-0 border-l-0 border-r-0 border-gray-800 border-opacity-50;
 }
 .header-nav {
     @apply flex list-none; 
@@ -26,11 +26,14 @@
 /** main **/
 
 .main {
-    @apply flex flex-grow;
+    @apply flex flex-grow bg-blue-700;
+}
+.container {
+    @apply w-3/4 mx-auto py-4;
 }
 
 /** footer **/
 
 .footer {
-    @apply h-8 flex-grow-0 bg-gray-500 text-center;
+    @apply flex-grow-0 h-8 bg-gray-500 text-center;
 }

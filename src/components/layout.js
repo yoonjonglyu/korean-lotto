@@ -4,9 +4,9 @@ import logo from '../images/Dhlottery_BI_JPG/로또645.jpg';
 
 const Layout = ({ children }) => {
   return (
-    <div id="wrap" className={'wrap'}>
-      <header className={'header'}>
-        <ul className={'header-nav'}>
+    <div id="wrap" className="wrap">
+      <header className="header">
+        <ul className="header-nav">
           <li>
             <Link to="./">
               <h1><img src={logo} width="100px"/></h1>
@@ -24,10 +24,12 @@ const Layout = ({ children }) => {
           </li>
         </ul>
       </header>
-      <main role="main" className={'main'}>
+      <main role="main" className="main">
+        <article className="container">
           {children}
+        </article>
       </main>
-      <footer className={'footer'}>
+      <footer className="footer">
           <p>ISA all right reserved.</p>
       </footer>
     </div>

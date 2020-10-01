@@ -4,7 +4,7 @@ import Layout from './Layout';
 const Home = () => {
   return (
     <Layout>
-      <p>홈입니다.</p>
+      <p>home</p>
     </Layout>
   );
 };

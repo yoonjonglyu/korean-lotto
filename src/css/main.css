@@ -21043,6 +21043,14 @@ video {
   justify-content: space-between;
   height: 4rem;
   flex-grow: 0;
+  border-width: 1px;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  --border-opacity: 1;
+  border-color: #2d3748;
+  border-color: rgba(45, 55, 72, var(--border-opacity));
+  --border-opacity: 0.5;
 }
 
 .header-nav {
@@ -21059,13 +21067,24 @@ video {
 .main {
   display: flex;
   flex-grow: 1;
+  --bg-opacity: 1;
+  background-color: #2b6cb0;
+  background-color: rgba(43, 108, 176, var(--bg-opacity));
+}
+
+.container {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 /** footer **/
 
 .footer {
-  height: 2rem;
   flex-grow: 0;
+  height: 2rem;
   --bg-opacity: 1;
   background-color: #a0aec0;
   background-color: rgba(160, 174, 192, var(--bg-opacity));
