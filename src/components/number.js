@@ -4,7 +4,24 @@ import Layout from './Layout';
 const number = () => {
   return (
     <Layout>
-      <p>로또 번호 추첨입니다.</p>
+      <div className="number-contents">
+        <nav className="options-nav">
+          <ul className="options-list">
+            <li>
+              <button>옵션1</button>
+            </li>
+            <li>
+              <button>옵션2</button>
+            </li>
+            <li>
+              <button>옵션3</button>
+            </li>
+          </ul>
+        </nav>
+        <div className="result-box">
+          <p>결과</p>
+        </div>
+      </div>
     </Layout>
   );
 };
