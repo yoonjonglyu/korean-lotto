@@ -17,10 +17,10 @@
     @apply flex items-center justify-between h-16 flex-grow-0 border border-t-0 border-l-0 border-r-0 border-gray-800 border-opacity-50;
 }
 .header-nav {
-    @apply flex list-none; 
+    @apply list-none; 
 }
 .header-nav li {
-    @apply p-5;
+    @apply inline-block p-5 text-sm align-middle;
 }
 
 /** main **/
@@ -30,6 +30,9 @@
 }
 .container {
     @apply w-3/4 mx-auto py-4;
+}
+.home-contents {
+    @apply py-10 text-center;
 }
 
 /** footer **/

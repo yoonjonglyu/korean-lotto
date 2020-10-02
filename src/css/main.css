@@ -21054,12 +21054,14 @@ video {
 }
 
 .header-nav {
-  display: flex;
   list-style-type: none;
 }
 
 .header-nav li {
+  display: inline-block;
   padding: 1.25rem;
+  font-size: 0.875rem;
+  vertical-align: middle;
 }
 
 /** main **/
@@ -21078,6 +21080,12 @@ video {
   margin-right: auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.home-contents {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
 }
 
 /** footer **/
