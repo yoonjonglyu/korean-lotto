@@ -2,6 +2,8 @@ import React from 'react';
 import Layout from './Layout';
 import ViewNumber from './view-number';
 
+const lottoNumber = [1,2,3,4,5,6];
+
 const Home = () => {
   return (
     <Layout>
@@ -12,7 +14,7 @@ const Home = () => {
          </div>
          <div>
            지난 회차 당첨번호
-           <ViewNumber />
+           <ViewNumber number={lottoNumber}/>
          </div>
       </div>
     </Layout>

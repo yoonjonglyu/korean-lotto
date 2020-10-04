@@ -1,5 +1,8 @@
 import React from 'react';
 import Layout from './Layout';
+import ViewNumber from './view-number';
+
+const lottoNumber = [2,4,6,8,10,12];
 
 const number = () => {
   return (
@@ -20,6 +23,7 @@ const number = () => {
         </nav>
         <div className="result-box">
           <p>결과</p>
+          <ViewNumber number={lottoNumber}/>
         </div>
       </div>
     </Layout>
