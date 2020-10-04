@@ -2,7 +2,14 @@ import React from 'react';
 import Layout from './Layout';
 import ViewNumber from './view-number';
 
-const lottoNumber = [2,4,6,8,10,12];
+const lottoNumber = [
+  {id: 0, number : 2},
+  {id: 1, number : 4},
+  {id: 1, number : 6},
+  {id: 1, number : 8},
+  {id: 1, number : 10},
+  {id: 1, number : 12}
+];
 
 const number = () => {
   return (

@@ -1,8 +1,8 @@
 import React from 'react';
 
 const viewNumber = ({ number } = props) => {
-    const ballList = number.map((num) => 
-        (<li>{num}</li>)
+    const ballList = number.map((arr, index) => 
+        (<li key={index}>{arr.number}</li>)
     );
     
     return (
