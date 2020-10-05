@@ -3,6 +3,8 @@ import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import { imported, lazy, useImported } from 'react-imported-component/macro';
 import '../css/main.css';
 
+import models from '../models/models';
+
 import Home from './Home';
 import loading from './loading';
 const lotto = imported(

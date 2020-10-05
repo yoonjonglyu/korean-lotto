@@ -3,3 +3,6 @@
 
 # dist 무시
 /dist
+
+# config 무시
+config.*
