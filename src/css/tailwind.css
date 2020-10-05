@@ -66,7 +66,7 @@
     @apply w-auto p-8 border border-gray-800;
 }
 .lotto-numbers li {
-    @apply inline-block mx-3 p-3 px-4 text-base text-white border border-green-900 bg-red-900 rounded-full;
+    @apply inline-block w-12 mx-3 p-3 text-base text-white text-center border border-green-900 bg-red-900 rounded-full;
 }
 
 /** footer **/
