@@ -2,8 +2,11 @@ import axios from 'axios';
 import * as actions from '../actions/index'; 
 import config from '../../config';
 
-const hangangUrl = `${config.apiHost}hangang.php`;
-const lottoUrl = `${config.apiHost}lotto.php?drw=`;
+const mode = "prod";
+const cors = "https://cors-anywhere.herokuapp.com/"
+
+const hangangUrl = mode === "dev" ? `${config.apiHost}hangang.php` : `${cors}http://hangang.dkserver.wo.tc/`;
+const lottoUrl = mode === "dev" ? `${config.apiHost}lotto.php?drw=` : `${cors}https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=`;
 
 const hangang = (dispatch) => {  
     try{
