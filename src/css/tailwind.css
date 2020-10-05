@@ -31,8 +31,42 @@
 .container {
     @apply w-3/4 mx-auto py-4;
 }
+
 .home-contents {
     @apply py-10 text-center;
+}
+.home-contents h2 {
+    @apply text-3xl;
+}
+.hangang-box {
+    @apply relative my-5;
+}
+.hangang-box img {
+    @apply absolute top-0 w-full h-full opacity-25 z-0;
+}
+.hangang-box h2 {
+    @apply relative mb-5 text-2xl font-sans text-gray-900 z-10;
+}
+.hangang-box p {
+    @apply relative mb-4 text-base z-10;
+}
+.hangang-box h3 {
+    @apply relative pb-4 text-2xl text-red-700 font-sans z-10;
+}
+.lotto-box {
+    @apply relative;
+}
+.lotto-box h2 {
+    @apply text-3xl;
+}
+.view-box {
+    @apply mt-4;
+}
+.lotto-numbers{
+    @apply w-auto p-8 border border-gray-800;
+}
+.lotto-numbers li {
+    @apply inline-block mx-3 p-3 px-4 text-base text-white border border-green-900 bg-red-900 rounded-full;
 }
 
 /** footer **/

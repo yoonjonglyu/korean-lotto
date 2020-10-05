@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from './Layout';
 import ViewNumber from './view-number';
+import images from '../images/hangang.jpg';
 
 import models from '../models/models';
 import { connect } from 'react-redux';
@@ -14,6 +15,7 @@ const Home = (props) => {
       <div className="home-contents">
          <h2>로또 추첨기</h2>
          <div className="hangang-box">
+           <img src={images} />
            <h2>한강 수온</h2>
            <p>
            謀事在人,成事在天(모사재인 성사재천)<br />
