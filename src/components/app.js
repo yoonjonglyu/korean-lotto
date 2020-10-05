@@ -1,9 +1,6 @@
 import React from 'react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import { imported, lazy, useImported } from 'react-imported-component/macro';
-import '../css/main.css';
-
-import models from '../models/models';
 
 import Home from './Home';
 import loading from './loading';
@@ -17,7 +14,7 @@ const NotFound = imported(
   () => import('./notfound'), {loadingComponent : loading}
 );
 
-const App = () => {
+const App = (props) => {
   return (
     <Router basename="/korean-lotto">
         <Switch>

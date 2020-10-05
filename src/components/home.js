@@ -2,22 +2,28 @@ import React from 'react';
 import Layout from './Layout';
 import ViewNumber from './view-number';
 
-const lottoNumber = [
-  {id: 0, number : 1},
-  {id: 1, number : 2},
-  {id: 1, number : 3},
-  {id: 1, number : 4},
-  {id: 1, number : 5},
-  {id: 1, number : 6}
-];
+import models from '../models/models';
+import { connect } from 'react-redux';
 
-const Home = () => {
+
+const Home = (props) => {
+  const lottoNumber = props.lotto || 
+  [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ];
+
   return (
     <Layout>
       <div className="home-contents">
          <h1>로또</h1>
          <div>
            한강 수온 표
+           {props.hangang}
          </div>
          <div>
            지난 회차 당첨번호
@@ -28,4 +34,18 @@ const Home = () => {
   );
 };
 
-export default Home;
+const mapStateProps = (state) => {
+  return {
+    hangang : state.hangang.temp,
+    lotto : state.lottoDrw.drwNumber
+  }
+}
+
+const mapDispatchProps = (dispatch) => {
+  return {
+      hangangTemp : models.hangang(dispatch),
+      lottoDrw : models.drwLotto(dispatch, '931')
+  }
+}
+
+export default connect(mapStateProps, mapDispatchProps)(Home);
