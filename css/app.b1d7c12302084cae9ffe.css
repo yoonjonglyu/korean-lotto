@@ -193,7 +193,8 @@ select { /* 1 */
  * Correct the inability to style clickable types in iOS and Safari.
  */
 
-button {
+button,
+[type="button"] {
   -webkit-appearance: button;
 }
 
@@ -201,7 +202,8 @@ button {
  * Remove the inner border and padding in Firefox.
  */
 
-button::-moz-focus-inner {
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -210,7 +212,8 @@ button::-moz-focus-inner {
  * Restore the focus styles unset by the previous rule.
  */
 
-button:-moz-focusring {
+button:-moz-focusring,
+[type="button"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -262,6 +265,11 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
@@ -675,12 +683,14 @@ video {
 }
 
 .header-nav {
-  display: flex;
   list-style-type: none;
 }
 
 .header-nav li {
+  display: inline-block;
   padding: 1.25rem;
+  font-size: 0.875rem;
+  vertical-align: middle;
 }
 
 /** main **/
@@ -701,6 +711,12 @@ video {
   padding-bottom: 1rem;
 }
 
+.home-contents {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
+}
+
 /** footer **/
 
 .footer {
@@ -712,4 +728,4 @@ video {
   text-align: center;
 }
 
-/*# sourceMappingURL=app.9d03175790b8deb25fe0.css.map*/
+/*# sourceMappingURL=app.b1d7c12302084cae9ffe.css.map*/
