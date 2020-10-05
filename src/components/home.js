@@ -7,15 +7,7 @@ import { connect } from 'react-redux';
 
 
 const Home = (props) => {
-  const lottoNumber = props.lotto || 
-  [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-  ];
+  const lottoNumber = props.lotto[0] !== undefined?  props.lotto : [1, 2, 3, 4, 5, 6];
 
   return (
     <Layout>
