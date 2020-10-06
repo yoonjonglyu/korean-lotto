@@ -20,3 +20,10 @@ export const getNowRound = (nowRound) => {
         nowRound
     };
 }
+
+export const getRandomNumber = (lottoNumber) => {
+    return {
+        type : types.GET_RANDOM_LOTTO,
+        lottoNumber
+    };
+}

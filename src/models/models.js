@@ -40,11 +40,25 @@ const getRound = (dispatch) => {
 
     dispatch(actions.getNowRound(round));
 }
+const getRandom = () => {
+    const result = [];
+
+    while(result.length < 6){
+        const random = Math.floor(Math.random() * 45);
+
+        if(result.includes(random) === false){
+            result.push(random);
+        }
+    }
+
+    return result;
+}
 
 const models = {
     "hangang" : hangang,
     "drwLotto" : drwLotto,
-    "getRound" : getRound
+    "getRound" : getRound,
+    "getRandom" : getRandom
 };
 
 export default models;

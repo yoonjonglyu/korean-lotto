@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const nowRound = (state = initialState, action) => {
-    if(action.type == types.GET_NOW_ROUND){
+    if(action.type === types.GET_NOW_ROUND){
         return {
             ...state,
             nowRound: action.nowRound

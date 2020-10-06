@@ -2,9 +2,15 @@ import React from 'react';
 import Layout from './Layout';
 import ViewNumber from './view-number';
 
-const number = () => {
-  const lottoNumber = [10, 20, 30, 40, 50, 60];
-  
+import * as actions from '../actions/index';
+import models from '../models/models';
+import { connect } from 'react-redux';
+
+const number = (props) => {
+  const randomNumber = () => {
+    props.getNumber(models.getRandom());
+  }
+
   return (
     <Layout>
       <div className="number-contents">
@@ -25,14 +31,26 @@ const number = () => {
         </nav>
         <div className="result-box">
           <h2>추첨 결과</h2>
-          <ViewNumber number={lottoNumber}/>
+          <ViewNumber number={props.lottoNumber}/>
         </div>
         <div className="submit-box">
-          <button>추첨하기</button>
+          <button onClick={randomNumber}>추첨하기</button>
         </div>
       </div>
     </Layout>
   );
 };
 
-export default number;
+const mapStateToProps = (state) => {
+  return {
+    lottoNumber : state.randomNumber.lottoNumber,
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+      getNumber : (arr) => {dispatch(actions.getRandomNumber(arr))},
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(number);

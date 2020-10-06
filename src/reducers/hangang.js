@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const hangang = (state = initialState, action) => {
-    if(action.type == types.GET_HANGANG){
+    if(action.type === types.GET_HANGANG){
         return {
             ...state,
             temp: action.temp

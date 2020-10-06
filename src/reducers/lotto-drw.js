@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const lottoDrw = (state = initialState, action) => {
-    if(action.type == types.GET_LOTTO_DRW){
+    if(action.type === types.GET_LOTTO_DRW){
         return {
             ...state,
             drwNumber: action.drwNumber
