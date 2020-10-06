@@ -41,7 +41,8 @@ const mapStateToProps = (state) => {
 
   return {
     hangang : state.hangang.temp,
-    lotto : state.lottoDrw.drwNumber
+    lotto : state.lottoDrw.drwNumber,
+    nowRound : state.nowRound.nowRound
   }
 }
 
