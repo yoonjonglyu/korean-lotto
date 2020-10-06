@@ -32,7 +32,7 @@ const Home = (props) => {
 };
 
 // @#!%$#%#$^@$!@$@!#@!#@!#!
-let nowRound = 931;
+let nowRound;
 
 const mapStateToProps = (state) => {
   nowRound = state.nowRound.nowRound;
