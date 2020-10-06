@@ -3,7 +3,6 @@ import Layout from './Layout';
 import ViewNumber from './view-number';
 import images from '../images/hangang.jpg';
 
-import * as actions from '../actions/index';
 import models from '../models/models';
 import { connect } from 'react-redux';
 
