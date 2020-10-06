@@ -21133,14 +21133,13 @@ body {
 
 .home-contents {
   height: 100%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   text-align: center;
   background-size: cover;
   background-image : url('../images/hangang.jpg');
 }
 
 .home-contents h2 {
+  padding-top: 3rem;
   font-size: 1.875rem;
 }
 
@@ -21234,7 +21233,7 @@ body {
 }
 
 .number-contents h2 {
-  margin-top: 3rem;
+  padding-top: 3rem;
   font-size: 1.875rem;
 }
 
@@ -21333,7 +21332,7 @@ body {
 }
 
 .lotto-contents h2 {
-  margin-top: 3rem;
+  padding-top: 3rem;
   font-size: 1.875rem;
 }
 

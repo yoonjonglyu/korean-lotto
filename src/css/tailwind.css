@@ -56,11 +56,11 @@ body {
 }
 
 .home-contents {
-    @apply h-full py-8 text-center bg-cover;
+    @apply h-full text-center bg-cover;
     background-image : url('../images/hangang.jpg');
 }
 .home-contents h2 {
-    @apply text-3xl;
+    @apply pt-12 text-3xl;
 }
 .hangang-box {
     @apply inline-block relative mt-10;
@@ -97,7 +97,7 @@ body {
     @apply h-full text-center;
 }
 .number-contents h2 {
-    @apply mt-12 text-3xl;
+    @apply pt-12 text-3xl;
 }
 .options-nav {
     @apply inline-block mt-12 border border-gray-300;
@@ -143,7 +143,7 @@ body {
     @apply h-full text-center;
 }
 .lotto-contents h2 {
-    @apply mt-12 text-3xl;
+    @apply pt-12 text-3xl;
 }
 
 /** footer **/
