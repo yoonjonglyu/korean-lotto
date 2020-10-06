@@ -7,8 +7,11 @@
 /** custom **/
 
 /** wrap **/
+body {
+    @apply bg-blue-300;
+}
 .wrap {
-    @apply flex flex-col min-h-screen;
+    @apply flex flex-col max-w-6xl min-h-screen mx-auto;
 }
 
 /** interface **/
@@ -34,7 +37,7 @@
 /** header **/
 
 .header {
-    @apply flex items-center justify-between h-16 flex-grow-0 border border-t-0 border-l-0 border-r-0 border-gray-800 border-opacity-50;
+    @apply flex items-center justify-between h-16 flex-grow-0 bg-white border border-t-0 border-l-0 border-r-0 border-gray-800 border-opacity-50;
 }
 .header-nav {
     @apply list-none; 
@@ -44,25 +47,23 @@
 }
 
 /** main **/
-
 .main {
     @apply flex flex-grow bg-blue-700;
 }
+
 .container {
-    @apply w-3/4 mx-auto py-4;
+    @apply mx-auto;
 }
 
 .home-contents {
-    @apply py-10 text-center;
+    @apply h-full py-8 text-center bg-cover;
+    background-image : url('../images/hangang.jpg');
 }
 .home-contents h2 {
     @apply text-3xl;
 }
 .hangang-box {
-    @apply relative my-5;
-}
-.hangang-box img {
-    @apply absolute top-0 w-full h-full opacity-25 z-0;
+    @apply inline-block relative mt-10;
 }
 .hangang-box h2 {
     @apply relative mb-5 text-2xl font-sans text-gray-900 z-10;
@@ -74,19 +75,75 @@
     @apply relative pb-4 text-2xl text-red-700 font-sans z-10;
 }
 .lotto-box {
-    @apply relative;
+    @apply relative mt-20;
 }
 .lotto-box h2 {
     @apply text-3xl;
 }
-.view-box {
-    @apply mt-4 p-2 bg-yellow-900;
+.lotto-box h2 span {
+    @apply bg-blue-600;
 }
-.lotto-numbers{
-    @apply w-auto bg-white border border-gray-800;
+.view-box {
+    @apply inline-block mt-4 p-2 bg-yellow-900;
+}
+.lotto-numbers {
+    @apply inline-block w-auto bg-white border border-gray-800;
 }
 .lotto-numbers li {
     @apply inline-block w-12 m-3 p-3 text-base text-white text-center rounded-full;
+}
+
+.number-contents {
+    @apply h-full text-center;
+}
+.number-contents h2 {
+    @apply mt-12 text-3xl;
+}
+.options-nav {
+    @apply inline-block mt-12 border border-gray-300;
+}
+.options-nav h3 {
+    @apply border-b border-gray-300;
+}
+.options-list {
+    @apply bg-white text-left;
+}
+.options-list li {
+    @apply inline-block mr-1;
+}
+.options-list li:last-child {
+    @apply m-0;
+}
+.options-list li button {
+    @apply h-full  p-2 bg-blue-600 outline-none;
+}
+.options-list li button:hover {
+    @apply bg-blue-300;
+}
+.options-list li button:active {
+    @apply bg-red-400;
+}
+.result-box {
+    @apply mt-12;
+}
+.submit-box {
+    @apply mt-8;
+}
+.submit-box button {
+    @apply p-2 bg-gray-100 border border-orange-600 outline-none;
+}
+.submit-box button:hover {
+    @apply bg-gray-300;
+}
+.submit-box button:active {
+    @apply bg-orange-400 border-2 border-green-600;
+}
+
+.lotto-contents {
+    @apply h-full text-center;
+}
+.lotto-contents h2 {
+    @apply mt-12 text-3xl;
 }
 
 /** footer **/
