@@ -3,6 +3,7 @@ import Layout from './Layout';
 import ViewNumber from './view-number';
 import images from '../images/hangang.jpg';
 
+import * as actions from '../actions/index';
 import models from '../models/models';
 import { connect } from 'react-redux';
 
@@ -25,7 +26,7 @@ const Home = (props) => {
            <h3>{props.hangang} °C</h3>
          </div>
          <div className="lotto-box">
-           <h2>지난 회차 당첨번호</h2>
+           <h2>지난 {props.nowRound} 회차 당첨번호</h2>
            <ViewNumber number={lottoNumber}/>
          </div>
       </div>
@@ -33,18 +34,23 @@ const Home = (props) => {
   );
 };
 
-const mapStateProps = (state) => {
+// @#!%$#%#$^@$!@$@!#@!#@!#!
+let nowRound = 931;
+
+const mapStateToProps = (state) => {
+  nowRound = state.nowRound.nowRound;
+
   return {
     hangang : state.hangang.temp,
     lotto : state.lottoDrw.drwNumber
   }
 }
 
-const mapDispatchProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
       hangangTemp : models.hangang(dispatch),
-      lottoDrw : models.drwLotto(dispatch, '931')
+      lottoDrw : models.drwLotto(dispatch, nowRound),
   }
 }
 
-export default connect(mapStateProps, mapDispatchProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

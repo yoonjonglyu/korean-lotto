@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
-import { imported, lazy, useImported } from 'react-imported-component/macro';
+import { imported } from 'react-imported-component/macro';
 
 import Home from './Home';
 import loading from './loading';
@@ -14,7 +14,10 @@ const NotFound = imported(
   () => import('./notfound'), {loadingComponent : loading}
 );
 
-const App = (props) => {
+import models from '../models/models';
+import { connect } from 'react-redux';
+
+const App = () => {
   return (
     <Router basename="/korean-lotto">
         <Switch>
@@ -27,4 +30,15 @@ const App = (props) => {
   );
 };
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    nowRound : state.nowRound.nowRound
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+      getNowRound : models.getRound(dispatch)
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(App);

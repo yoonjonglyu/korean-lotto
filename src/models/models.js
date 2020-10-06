@@ -2,8 +2,8 @@ import axios from 'axios';
 import * as actions from '../actions/index'; 
 import config from '../../config';
 
-const mode = "prod";
-const cors = "https://cors-anywhere.herokuapp.com/"
+const mode = "dev";
+const cors = "https://cors-anywhere.herokuapp.com/";
 
 const hangangUrl = mode === "dev" ? `${config.apiHost}hangang.php` : `${cors}http://hangang.dkserver.wo.tc/`;
 const lottoUrl = mode === "dev" ? `${config.apiHost}lotto.php?drw=` : `${cors}https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=`;
@@ -30,9 +30,21 @@ const drwLotto = (dispatch, drw) => {
     }
 };
 
+const getRound = (dispatch) => {
+    const startRound = 931; 
+    const startDate = new Date('2020-10-03');
+    const endDate = new Date();
+    const dateDiff = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 3600 * 24));
+    
+    const round = startRound + Math.floor(dateDiff / 7);
+
+    dispatch(actions.getNowRound(round));
+}
+
 const models = {
     "hangang" : hangang,
-    "drwLotto" : drwLotto
+    "drwLotto" : drwLotto,
+    "getRound" : getRound
 };
 
 export default models;

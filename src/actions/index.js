@@ -13,3 +13,10 @@ export const getLottoDrw = (drwNumber) => {
         drwNumber
     };
 }
+
+export const getNowRound = (nowRound) => {
+    return {
+        type : types.GET_NOW_ROUND,
+        nowRound
+    };
+}
