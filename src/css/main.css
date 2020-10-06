@@ -21035,6 +21035,46 @@ video {
   min-height: 100vh;
 }
 
+/** interface **/
+
+.green {
+  --bg-opacity: 1;
+  background-color: #48bb78;
+  background-color: rgba(72, 187, 120, var(--bg-opacity));
+}
+
+.gray {
+  --bg-opacity: 1;
+  background-color: #718096;
+  background-color: rgba(113, 128, 150, var(--bg-opacity));
+}
+
+.red {
+  --bg-opacity: 1;
+  background-color: #f56565;
+  background-color: rgba(245, 101, 101, var(--bg-opacity));
+}
+
+.orange {
+  --bg-opacity: 1;
+  background-color: #f6ad55;
+  background-color: rgba(246, 173, 85, var(--bg-opacity));
+}
+
+.blue {
+  --bg-opacity: 1;
+  background-color: #4299e1;
+  background-color: rgba(66, 153, 225, var(--bg-opacity));
+}
+
+.bonus {
+  border-width: 4px;
+  --border-opacity: 1;
+  border-color: #ecc94b;
+  border-color: rgba(236, 201, 75, var(--border-opacity));
+  border-style: double;
+}
+
 /** header **/
 
 .header {
@@ -21146,11 +21186,17 @@ video {
 
 .view-box {
   margin-top: 1rem;
+  padding: 0.5rem;
+  --bg-opacity: 1;
+  background-color: #744210;
+  background-color: rgba(116, 66, 16, var(--bg-opacity));
 }
 
 .lotto-numbers{
   width: auto;
-  padding: 2rem;
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
   border-width: 1px;
   --border-opacity: 1;
   border-color: #2d3748;
@@ -21160,21 +21206,13 @@ video {
 .lotto-numbers li {
   display: inline-block;
   width: 3rem;
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
+  margin: 0.75rem;
   padding: 0.75rem;
   font-size: 1rem;
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
   text-align: center;
-  border-width: 1px;
-  --border-opacity: 1;
-  border-color: #22543d;
-  border-color: rgba(34, 84, 61, var(--border-opacity));
-  --bg-opacity: 1;
-  background-color: #742a2a;
-  background-color: rgba(116, 42, 42, var(--bg-opacity));
   border-radius: 9999px;
 }
 
