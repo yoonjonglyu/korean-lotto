@@ -44,7 +44,7 @@ const getRandom = () => {
     const result = [];
 
     while(result.length < 6){
-        const random = Math.floor(Math.random() * 45);
+        const random = Math.floor(Math.random() * 46);
 
         if(result.includes(random) === false && random !== 0){
             result.push(random);
