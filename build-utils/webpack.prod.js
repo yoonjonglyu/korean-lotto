@@ -34,7 +34,7 @@ const config = {
                 test : /\.(png|jpe?g|git)$/,
                 loader : 'file-loader',
                 options : {
-                    name : `/asset/[contenthash].[ext]`,
+                    name : `/assets/[contenthash].[ext]`,
                 }
             }
         ]
