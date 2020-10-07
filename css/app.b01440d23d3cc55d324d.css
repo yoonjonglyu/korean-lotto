@@ -765,7 +765,7 @@ body {
   padding-bottom: 1.5rem;
   text-align: center;
   background-size: cover;
-  background-image : url('../asset/2e45500bd7a33fe30769cee5eabe98b0.jpg');
+  background-image : url(.//asset/2e45500bd7a33fe30769cee5eabe98b0.jpg);
 }
 
 .home-contents h2 {
@@ -929,7 +929,12 @@ body {
   margin-top: 2rem;
 }
 
+.submit-box input {
+  padding: 0.5rem;
+}
+
 .submit-box button {
+  margin-top: 0.5rem;
   padding: 0.5rem;
   --bg-opacity: 1;
   background-color: #f7fafc;
@@ -979,4 +984,4 @@ body {
   text-align: center;
 }
 
-/*# sourceMappingURL=app.abcb090858d18d64c4f3.css.map*/
+/*# sourceMappingURL=app.b01440d23d3cc55d324d.css.map*/
