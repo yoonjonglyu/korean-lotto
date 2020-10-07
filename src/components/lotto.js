@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from './Layout';
 import ViewNumber from './view-number';
 
-const lotto = () => {
-  const lottoNumber = [2, 4, 6, 8, 10, 12];
+import * as actions from '../actions/index';
+import models from '../models/models';
+import { connect } from 'react-redux';
+
+const lotto = (props) => {
+  const lottoNumber = props.lotto.length > 0 ? props.lotto : [2, 4, 6, 8, 10, 12];
+  const [drw, setDrw] = useState('');
+
+  const searchDrw = () => {
+    props.lottoDrw(drw);
+  }
+  const handleDrw = (e) => {
+    setDrw(e.target.value)
+  }
 
   return (
     <Layout>
@@ -28,11 +40,26 @@ const lotto = () => {
           <ViewNumber number={lottoNumber}/>
         </div>
         <div className="submit-box">
-          <button>추첨하기</button>
+          <input type="number" placeholder="조건을 입력해주세요." value={drw} onChange={handleDrw} /><br />
+          <button onClick={searchDrw}>조회하기</button>
         </div>
       </div>
     </Layout>
   );
 };
 
-export default lotto;
+const mapStateToProps = (state) => {
+  return {
+    lotto : state.lottoDrw.drwNumber,
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  const dis = dispatch;
+
+  return {
+    lottoDrw : (drw) => {models.drwLotto(dis, drw)},
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(lotto);

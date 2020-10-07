@@ -21300,7 +21300,12 @@ body {
   margin-top: 2rem;
 }
 
+.submit-box input {
+  padding: 0.5rem;
+}
+
 .submit-box button {
+  margin-top: 0.5rem;
   padding: 0.5rem;
   --bg-opacity: 1;
   background-color: #f7fafc;

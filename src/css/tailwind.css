@@ -129,8 +129,11 @@ body {
 .submit-box {
     @apply mt-8;
 }
+.submit-box input {
+    @apply p-2;
+}
 .submit-box button {
-    @apply p-2 bg-gray-100 border border-orange-600 outline-none;
+    @apply  mt-2 p-2 bg-gray-100 border border-orange-600 outline-none;
 }
 .submit-box button:hover {
     @apply bg-gray-300;
